@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In • SmartTutor Connect</title>
+    <link href="../src/css/main.css" rel="stylesheet">
+    <link href="../src/css/pages.css" rel="stylesheet">
+</head>
+
+<body class="page-body">
+    <header class="page-header">
+        <div class="container">
+            <a class="brand-mark" href="../index.html">
+                <img src="../public/images/logo.png" alt="SmartTutor Connect logo">
+                <span>SmartTutor Connect</span>
+            </a>
+            <nav class="page-nav">
+                <a href="../index.html#find">Find a Tutor</a>
+                <a href="../index.html#become">Become a Tutor</a>
+                <a href="register.html" class="btn btn-outline">Create account</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-layout">
+        <section class="auth-card">
+            <header>
+                <p class="role-badge">Returning member access</p>
+                <h1>Welcome back</h1>
+                <p>Sign in to manage your sessions and progress.</p>
+            </header>
+
+            <form class="form-grid full-width" action="sign-in.php" method="post" data-signin-form>
+                <p class="form-feedback" data-form-feedback aria-live="polite"></p>
+                <div class="input-group full">
+                    <label for="signinEmail">Email address</label>
+                    <input id="signinEmail" name="email" type="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="input-group full">
+                    <label for="signinPassword">Password</label>
+                    <input id="signinPassword" name="password" type="password" placeholder="Your secure password" required>
+                </div>
+
+                <div class="auth-actions full">
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+                </div>
+
+                <p class="auth-footnote full">
+                    New to SmartTutor Connect? <a href="register.html">Create your free account</a>.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const errorMessage = params.get('error');
+            const feedback = document.querySelector('[data-form-feedback]');
+
+            if (errorMessage && feedback) {
+                feedback.textContent = errorMessage;
+                feedback.classList.add('form-feedback--error');
+                params.delete('error');
+                const baseUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+                window.history.replaceState({}, document.title, baseUrl);
+            }
+        })();
+    </script>
+</body>
+
+</html>

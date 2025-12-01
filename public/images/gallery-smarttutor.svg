@@ -1,0 +1,19 @@
+<svg width="1200" height="768" viewBox="0 0 1200 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="768" rx="48" fill="#4D1417" />
+  <rect x="96" y="160" width="1008" height="456" rx="40" fill="#F2EFEC" />
+  <rect x="144" y="212" width="420" height="340" rx="34" fill="#CAA03F" opacity="0.85" />
+  <rect x="180" y="248" width="344" height="264" rx="28" fill="#FFFFFF" />
+  <rect x="196" y="404" width="312" height="92" rx="26" fill="#4D1417" opacity="0.85" />
+  <circle cx="340" cy="324" r="74" fill="#4D1417" />
+  <circle cx="304" cy="300" r="58" fill="#CAA03F" opacity="0.78" />
+  <rect x="600" y="236" width="420" height="320" rx="34" fill="#4D1417" opacity="0.88" />
+  <rect x="636" y="272" width="352" height="248" rx="26" fill="#2E0A0D" />
+  <rect x="660" y="298" width="304" height="184" rx="24" fill="#CAA03F" opacity="0.85" />
+  <circle cx="766" cy="338" r="52" fill="#F2EFEC" />
+  <circle cx="852" cy="358" r="46" fill="#F2EFEC" />
+  <rect x="676" y="500" width="268" height="36" rx="18" fill="#F2EFEC" opacity="0.8" />
+  <rect x="520" y="584" width="480" height="28" rx="14" fill="#CAA03F" opacity="0.55" />
+  <text x="624" y="644" font-family="'Inter', sans-serif" font-size="48" font-weight="700" fill="#4D1417">SmartTutor Connect</text>
+  <text x="624" y="700" font-family="'Inter', sans-serif" font-size="36" font-weight="500" fill="#4D1417">Find the Right Tutor • Anytime • Anywhere</text>
+</svg>
+

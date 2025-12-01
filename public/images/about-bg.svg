@@ -1,0 +1,16 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#4D1417" />
+  <circle cx="1280" cy="280" r="260" fill="#CAA03F" opacity="0.35" />
+  <circle cx="380" cy="720" r="300" fill="#CAA03F" opacity="0.18" />
+  <circle cx="1400" cy="760" r="220" fill="#CAA03F" opacity="0.12" />
+  <path d="M0 420C220 360 540 340 760 420C990 504 1200 500 1600 420V900H0V420Z" fill="#5E1B20" opacity="0.7" />
+  <g opacity="0.24">
+    <circle cx="520" cy="220" r="12" fill="#CAA03F" />
+    <circle cx="570" cy="220" r="12" fill="#CAA03F" />
+    <circle cx="620" cy="220" r="12" fill="#CAA03F" />
+    <circle cx="520" cy="270" r="12" fill="#CAA03F" />
+    <circle cx="570" cy="270" r="12" fill="#CAA03F" />
+    <circle cx="620" cy="270" r="12" fill="#CAA03F" />
+  </g>
+</svg>
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard • SmartTutor Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/pages.css">
+    <link rel="stylesheet" href="../src/css/dashboard.css">
+</head>
+
+<body class="page-body" data-dashboard-role="student" data-api-base="../api">
+    <header class="page-header">
+        <div class="container">
+            <a class="brand-mark" href="../index.html">
+                <img src="../public/images/logo.png" alt="SmartTutor Connect logo">
+                <span>SmartTutor Connect</span>
+            </a>
+            <nav class="page-nav" aria-label="Student navigation">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#sessions">Sessions</a>
+                <a href="#progress">Progress</a>
+                <a href="#messages">Messages</a>
+            </nav>
+            <div class="user-chip">
+                <img src="../public/images/student-headphones.svg" alt="Rita Boateng portrait">
+                <div>
+                    <span data-user-name>Rita Boateng</span>
+                    <small data-user-meta>Student · SHS / STEM focus</small>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-layout">
+        <aside class="profile-sidebar">
+            <section class="sidebar-card">
+                <h2>Week at a glance</h2>
+                <div class="progress-bar" aria-label="Goal completion: 68%">
+                    <span style="width: 68%;"></span>
+                </div>
+                <ul class="sidebar-list">
+                    <li>
+                        <strong>Next session</strong>
+                        <span>Physics with Aisha · Wed, 4:00 PM</span>
+                    </li>
+                    <li>
+                        <strong>Study goal</strong>
+                        <span>Complete calculus mock test by Friday</span>
+                    </li>
+                    <li>
+                        <strong>Focus area</strong>
+                        <span>STEM · Exam preparation · WAEC</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sidebar-card" id="progress">
+                <h3>Quick stats</h3>
+                <ul class="mini-list">
+                    <li>
+                        <div>
+                            <strong>12</strong>
+                            <span>Sessions completed</span>
+                        </div>
+                        <span class="badge-soft">+3 this month</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>92%</strong>
+                            <span>Assignment completion</span>
+                        </div>
+                        <span class="badge-soft">On track</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>4.8/5</strong>
+                            <span>Average session rating</span>
+                        </div>
+                        <span class="badge-soft">Keep it up!</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sidebar-card" id="messages">
+                <h3>Action reminders</h3>
+                <ul class="timeline">
+                    <li>Upload chemistry worksheet feedback.</li>
+                    <li>Confirm availability for weekend revision class.</li>
+                    <li>Review personalised practice set from Samuel.</li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="profile-main">
+            <section class="dashboard-section" id="sessions">
+                <header>
+                    <div>
+                        <h2>Upcoming sessions</h2>
+                        <p>Stay prepared for your scheduled lessons this week.</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-outline" type="button">Book new session</button>
+                        <button class="btn btn-primary" type="button">Join next class</button>
+                    </div>
+                </header>
+
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Tutor</th>
+                                <th>Subject</th>
+                                <th>Date &amp; time</th>
+                                <th>Mode</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Aisha Bello</td>
+                                <td>Physics · Waves &amp; Optics</td>
+                                <td>Wed, 10 Apr · 4:00 PM</td>
+                                <td>Online</td>
+                                <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                                <td><button class="btn btn-sm btn-outline" type="button">View brief</button></td>
+                            </tr>
+                            <tr>
+                                <td>Samuel Owusu</td>
+                                <td>Maths · Differential Calculus</td>
+                                <td>Fri, 12 Apr · 5:30 PM</td>
+                                <td>Hybrid</td>
+                                <td><span class="status-badge status-pending">Awaiting notes</span></td>
+                                <td><button class="btn btn-sm btn-outline" type="button">Add prep task</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Doe</td>
+                                <td>Study skills coaching</td>
+                                <td>Sun, 14 Apr · 2:00 PM</td>
+                                <td>Online</td>
+                                <td><span class="status-badge status-rescheduled">Rescheduled</span></td>
+                                <td><button class="btn btn-sm btn-outline" type="button">Pick new slot</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <header>
+                    <div>
+                        <h2>Learning milestones</h2>
+                        <p>Track how close you are to your goals.</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-outline" type="button">Update progress</button>
+                    </div>
+                </header>
+
+                <div class="insight-grid">
+                    <article class="insight-card">
+                        <strong>Exam readiness · 74%</strong>
+                        <span>Complete mock WAEC physics paper to unlock personalised final-week revision plan.</span>
+                    </article>
+                    <article class="insight-card">
+                        <strong>Confidence boost · +18%</strong>
+                        <span>Confidence scores have improved this month thanks to consistent follow-up assignments.</span>
+                    </article>
+                    <article class="insight-card">
+                        <strong>Practice streak · 9 days</strong>
+                        <span>Daily micro-practice in calculus has increased speed by 22 seconds per question.</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <header>
+                    <div>
+                        <h2>Recommended tutors</h2>
+                        <p>Expand your support team with verified experts.</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-outline" type="button">View directory</button>
+                    </div>
+                </header>
+
+                <ul class="mini-list">
+                    <li>
+                        <div>
+                            <strong>Michael Kumi</strong>
+                            <span>Advanced calculus · Kumasi · Hybrid</span>
+                        </div>
+                        <span class="badge-soft">4.9 ★</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Fatima Abdul</strong>
+                            <span>Analytical writing · Tamale · Online</span>
+                        </div>
+                        <span class="badge-soft">High demand</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>David Osei</strong>
+                            <span>Exam strategy · Accra · Online</span>
+                        </div>
+                        <span class="badge-soft">Response &lt; 12 hrs</span>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="../src/js/auth.js" defer></script>
+</body>
+
+</html>

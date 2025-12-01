@@ -1,0 +1,8 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="#4D1417" />
+  <path d="M24 13C18.477 13 14 17.477 14 23C14 28.523 18.477 33 24 33C29.523 33 34 28.523 34 23C34 17.477 29.523 13 24 13Z" fill="#CAA03F" />
+  <path d="M24 18C21.239 18 19 20.239 19 23C19 25.761 21.239 28 24 28C26.761 28 29 25.761 29 23C29 20.239 26.761 18 24 18Z" fill="#4D1417" />
+  <text x="62" y="30" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#F2EFEC">SmartTutor</text>
+  <text x="62" y="44" font-family="Inter, sans-serif" font-size="12" font-weight="500" letter-spacing="0.06em" fill="#CAA03F">CONNECT</text>
+</svg>
+

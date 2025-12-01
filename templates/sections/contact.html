@@ -1,0 +1,39 @@
+<!-- Contact Section: Contact information and inquiry form -->
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+        <div>
+            <h2 id="contact-title" class="section-title">Reach out</h2>
+            <p class="section-sub">Questions about onboarding, partnerships, or enterprise tutoring? Leave us a note and we'll respond within one business day.</p>
+            <!-- Contact information -->
+            <ul class="contact-list">
+                <li><span class="contact-label">Email:</span> <a href="mailto:hello@smarttutorconnect.com">hello@smarttutorconnect.com</a></li>
+                <li><span class="contact-label">Phone:</span> <a href="tel:+233555123456">+233 555 123 456</a> • <a href="tel:+237673031205">+237 673 031 205</a></li>
+                <li><span class="contact-label">Head Office:</span> 1 University Avenue, Berekuso</li>
+                <li><span class="contact-label">Security hotline:</span> <a href="mailto:security@smarttutorconnect.com">security@smarttutorconnect.com</a> <span class="sla-pill">24/7 • 1 hr SLA</span></li>
+            </ul>
+        </div>
+        <!-- Contact form -->
+        <form class="contact-form" aria-label="Contact SmartTutor">
+            <label for="contact-name">Name</label>
+            <input required id="contact-name" name="name" placeholder="Your name" />
+
+            <label for="contact-email">Email</label>
+            <input required id="contact-email" name="email" type="email" placeholder="you@example.com" />
+
+            <label for="contact-role">I am a</label>
+            <select id="contact-role" name="role" required>
+                <option value="" selected disabled hidden>Select your role</option>
+                <option value="student">Student</option>
+                <option value="parent">Parent/Guardian</option>
+                <option value="tutor">Tutor</option>
+                <option value="organization">Organization</option>
+            </select>
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p class="contact-feedback" data-contact-feedback aria-live="polite"></p>
+        </form>
+    </div>
+</section>

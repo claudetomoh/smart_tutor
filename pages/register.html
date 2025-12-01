@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Account • SmartTutor Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="../src/css/main.css" rel="stylesheet">
+    <link href="../src/css/pages.css" rel="stylesheet">
+</head>
+
+<body class="page-body">
+    <header class="page-header">
+        <div class="container">
+            <a class="brand-mark" href="../index.html">
+                <img src="../public/images/logo.png" alt="SmartTutor Connect logo">
+                <span>SmartTutor Connect</span>
+            </a>
+            <nav class="page-nav">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#find">Tutor Directory</a>
+                <a href="../index.html#become">Become a Tutor</a>
+                <a href="sign-in.html" class="btn btn-outline">Sign in</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-layout">
+        <section class="auth-card">
+            <header>
+                <p class="role-badge" id="role-badge">Student onboarding</p>
+                <h1>Create your SmartTutor account</h1>
+                <p>Set up your account and manage your learning or tutoring profile.</p>
+            </header>
+
+            <div class="role-toggle" role="group" aria-label="Choose account type">
+                <button type="button" class="role-pill active" data-role="student">Learner account</button>
+                <button type="button" class="role-pill" data-role="tutor">Tutor account</button>
+            </div>
+
+            <form class="form-grid full-width" action="register.php" method="post" id="registerForm">
+                <input type="hidden" name="account_type" id="account_type" value="student">
+
+                <div class="form-grid full">
+                    <div class="input-group">
+                        <label for="firstName">First name</label>
+                        <input id="firstName" name="first_name" type="text" placeholder="Ama" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last name</label>
+                        <input id="lastName" name="last_name" type="text" placeholder="Mensah" required>
+                    </div>
+                </div>
+
+                <div class="form-grid full">
+                    <div class="input-group">
+                        <label for="registerEmail">Email address</label>
+                        <input id="registerEmail" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerPhone">Mobile number</label>
+                        <input id="registerPhone" name="phone" type="tel" placeholder="(+233) 20 000 0000">
+                    </div>
+                </div>
+
+                <div class="form-grid full">
+                    <div class="input-group">
+                        <label for="registerPassword">Create password</label>
+                        <input id="registerPassword" name="password" type="password" placeholder="Use at least 12 characters" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerConfirm">Confirm password</label>
+                        <input id="registerConfirm" name="password_confirmation" type="password" placeholder="Re-enter your password" required>
+                    </div>
+                </div>
+
+                <section id="studentFields">
+                    <p>Student focus (optional)</p>
+                    <div class="input-group">
+                        <label for="studentLevel">Current level</label>
+                        <select id="studentLevel" name="level">
+                            <option value="">Select level</option>
+                            <option value="shs">Senior High School</option>
+                            <option value="undergrad">Undergraduate</option>
+                            <option value="postgrad">Postgraduate</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="studentGoal">Primary goal</label>
+                        <select id="studentGoal" name="goal">
+                            <option value="">Choose goal</option>
+                            <option value="grades">Improve grades</option>
+                            <option value="exam">Ace an exam</option>
+                            <option value="skill">Build a new skill</option>
+                            <option value="support">General academic support</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section id="tutorFields" style="display:none;">
+                    <p>Tutor professional profile (optional)</p>
+                    <div class="input-group">
+                        <label for="tutorExpertise">Primary subject</label>
+                        <select id="tutorExpertise" name="expertise">
+                            <option value="">Select subject</option>
+                            <option value="stem">STEM</option>
+                            <option value="languages">Languages & Humanities</option>
+                            <option value="tech">Tech & Coding</option>
+                            <option value="business">Business & Finance</option>
+                            <option value="creative">Creative & Arts</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="tutorBio">Short professional bio</label>
+                        <textarea id="tutorBio" name="bio" placeholder="Share your teaching approach"></textarea>
+                    </div>
+                </section>
+
+                <div class="auth-meta full">
+                    <label for="terms">
+                        <input id="terms" type="checkbox" name="terms" required>
+                        I agree to the <a href="#">terms of service</a> and <a href="#">privacy policy</a>.
+                    </label>
+                </div>
+
+                <div class="auth-actions full">
+                    <button class="btn btn-primary" type="submit">Create my account</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const studentBtn = document.querySelector('[data-role="student"]');
+        const tutorBtn = document.querySelector('[data-role="tutor"]');
+        const studentFields = document.getElementById('studentFields');
+        const tutorFields = document.getElementById('tutorFields');
+        const accountType = document.getElementById('account_type');
+        const roleBadge = document.getElementById('role-badge');
+
+        studentBtn.addEventListener('click', () => {
+            studentBtn.classList.add('active');
+            tutorBtn.classList.remove('active');
+            studentFields.style.display = 'block';
+            tutorFields.style.display = 'none';
+            accountType.value = 'student';
+            roleBadge.textContent = 'Student onboarding';
+        });
+
+        tutorBtn.addEventListener('click', () => {
+            tutorBtn.classList.add('active');
+            studentBtn.classList.remove('active');
+            studentFields.style.display = 'none';
+            tutorFields.style.display = 'block';
+            accountType.value = 'tutor';
+            roleBadge.textContent = 'Tutor onboarding';
+        });
+    </script>
+</body>
+
+</html>

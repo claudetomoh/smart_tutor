@@ -1,0 +1,149 @@
+
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* How the body should look like*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #353535;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+
+/* ===== I wanted a cool taint to it instead of the usual solid colors and found this tag to give it a gradient color ===== */
+nav {
+  background: linear-gradient(90deg, rgb(136, 18, 9),  rgb(253, 143, 143));
+  color: white;
+
+/* =====Flex would help the nav bar be horizontal and clickable. Rem makes it relative to the size ===== */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+ 
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: rgb(248, 248, 248);
+  margin-left: 1.5rem;
+  font-weight: 500;
+ 
+}
+
+/* ===== to make it clickable ===== */
+
+.nav-links a:hover {
+  color: #660202;
+}
+
+/* ===== DASHBOARD TITLE ===== */
+.dashboard-title {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+  color: #910f0f;
+}
+
+/* ===== COURSE GRID ===== */
+.course-grid {
+  display: grid;
+
+  gap: 1.5rem;
+  padding: 0 2rem 3rem 2rem;
+}
+
+/* ===== COURSE CARD ===== */
+.course-card {
+  background: rgb(251, 251, 251);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+  color: #de1c1c;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  margin-bottom: 1rem;
+}
+
+.course-card button {
+  background-color: #ee8181;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.course-card button:hover {
+  background-color: #700000;
+}
+/* ==========================================
+    RESPONSIVE DESIGN SECTION
+   ==========================================
+   I researched responsive design on W3Schools 
+   , and I learned that @media 
+   queries help web pages adjust their layout 
+   depending on screen size. 
+   This part of my code is to make the dashboard 
+   look good on smaller screens (like phones).
+*/
+
+
+button.join-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+
+@media (max-width: 600px) {
+
+  /* 
+     After testing on mobile view, I noticed that 
+     the logo and nav links were too close together.
+     I used 'flex-direction: column' to stack them 
+     vertically instead of keeping them side-by-side.
+     I learned this technique from a Flexbox example 
+     on CSS-Tricks.
+  */
+  nav {
+    flex-direction: column;
+  }
+
+  /*
+     I added some margin at the top so that the 
+     links don't stick too tightly to the logo. 
+     I found out that using rem units is better 
+     for accessibility because it scales with the 
+     user’s font size settings. 
+     (Source: MDN - CSS Units)
+  */
+  .nav-links {
+    margin-top: 0.5rem;
+  }
+}
