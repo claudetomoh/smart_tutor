@@ -37,9 +37,9 @@ $config = require __DIR__ . '/api/config/database.php';
 
 $host = $config['host'] ?? 'localhost';
 $port = (int) ($config['port'] ?? 3306);
-$database = $config['database'] ?? 'smarttutor';
-$username = $config['username'] ?? 'root';
-$password = $config['password'] ?? '';
+$database = $config['database'] ?? 'webtech_2025A_tomoh_ikfingeh';
+$username = $config['username'] ?? 'tomoh.ikfingeh';
+$password = $config['password'] ?? 'STCL@ude20@?';
 $charset = $config['charset'] ?? 'utf8mb4';
 
 $conn = new mysqli($host, $username, $password, '', $port);
